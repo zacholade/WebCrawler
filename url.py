@@ -5,7 +5,7 @@ class URL:
     __slots__ = ("scheme", "netloc", "path",
                  "params", "query", "fragment", "_raw_url")
 
-    def __init__(self, raw_url):
+    def __init__(self, raw_url: str):
         """https://docs.python.org/3/library/urllib.parse.html"""
         self.scheme, self.netloc, self.path,\
             self.params, self.query, self.fragment = urlparse(raw_url)

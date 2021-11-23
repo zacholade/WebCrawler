@@ -23,7 +23,7 @@ class Crawler(LoggingMixin):
         self._visited_urls.add(url)
         await asyncio.create_task(self._crawl(url, current_depth=0))
 
-    async def _crawl(self, url: URL, current_depth):
+    async def _crawl(self, url: URL, current_depth: int):
         if current_depth > self._max_depth:
             return
 
@@ -60,7 +60,7 @@ class Crawler(LoggingMixin):
         except (aiohttp.ClientConnectionError, aiohttp.ClientResponseError) as e:
             self.logger.warning(f"Connection Error: {e}")
 
-    def _apply_filters(self, urls: set[URL]):
+    def _apply_filters(self, urls: set[URL]) -> set[URL]:
         for url_filter in self._url_filters:
             urls = url_filter(urls)
 

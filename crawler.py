@@ -16,12 +16,13 @@ class Crawler(LoggingMixin):
         self._visited_urls: set[URL] = set()
         self._max_depth: int = max_depth
 
-    async def crawl(self, url: URL):
+    async def crawl(self, url: URL) -> set[URL]:
         """
         Starting URL to crawl.
         """
         self._visited_urls.add(url)
         await asyncio.create_task(self._crawl(url, current_depth=0))
+        return self._visited_urls
 
     async def _crawl(self, url: URL, current_depth: int):
         if current_depth > self._max_depth:

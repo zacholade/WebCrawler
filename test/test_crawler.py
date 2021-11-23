@@ -1,4 +1,3 @@
-from crawler import Crawler
 import unittest
 
 

@@ -2,6 +2,7 @@ Running Tests:
     `py -m unittest discover test`
 
 Running Application:
+    `py -m pip install -r requirements.txt`
     `py main.py -url <start url>`
 
 General Flow:

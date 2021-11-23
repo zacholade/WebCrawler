@@ -1,5 +1,5 @@
 import asyncio
-import logging
+
 import aiohttp
 
 from filters import Filter

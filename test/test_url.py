@@ -1,5 +1,6 @@
-from url import URL
 import unittest
+
+from url import URL
 
 
 class TestURL(unittest.TestCase):

@@ -1,5 +1,7 @@
-from aiohttp import web
 from collections import defaultdict
+
+from aiohttp import web
+
 
 class MockServer:
     def __init__(self):

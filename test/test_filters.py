@@ -1,5 +1,6 @@
-from filters import *
 import unittest
+
+from filters import *
 
 
 class TestFilters(unittest.TestCase):

@@ -1,4 +1,5 @@
 import unittest
+
 from html_parser import HTMLParser
 from url import URL
 

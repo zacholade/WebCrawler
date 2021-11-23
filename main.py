@@ -1,8 +1,8 @@
+import argparse
 import asyncio
 
 from crawler import Crawler
 from filters import SubDomainFilter, ValidURLFilter
-import argparse
 from logger import setup_logging
 from url import URL
 

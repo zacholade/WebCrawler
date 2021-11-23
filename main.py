@@ -3,7 +3,7 @@ import asyncio
 from crawler import Crawler
 from filters import SubDomainFilter, ValidURLFilter
 import argparse
-
+from logger import setup_logging
 from url import URL
 
 
@@ -16,10 +16,11 @@ async def main(url: str):
         ]),
     ]
 
-    # Rate Limit Logic
+    # TODO Rate Limit Logic
     number_requests = 10
     per_n_seconds = 5
-    max_depth = 2
+
+    max_depth = 10
 
     s = Crawler(filters, max_depth=max_depth)
     url = URL(url)
@@ -33,6 +34,7 @@ if __name__ == "__main__":
     url: str = args.url
 
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(url))
+    with setup_logging(debug=True):
+        loop.run_until_complete(main(url))
     loop.close()
 

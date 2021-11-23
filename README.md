@@ -1,10 +1,10 @@
-##running tests:
+Running Tests:
     `py -m unittest discover test`
 
-##running application:
+Running Application:
     `py main.py -url <start url>`
 
-## General Flow:
+General Flow:
 1. Make request to URL.
 2. Check request is 200 OK
 3. Match all URLs from page

@@ -37,4 +37,3 @@ if __name__ == "__main__":
     with setup_logging(debug=True):
         loop.run_until_complete(main(url))
     loop.close()
-

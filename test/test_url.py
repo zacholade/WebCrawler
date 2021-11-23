@@ -45,4 +45,3 @@ class TestURL(unittest.TestCase):
         for url_string in url_strings:
             url = URL(url_string)
             self.assertEqual(url_string, url.fully_qualified_url)
-

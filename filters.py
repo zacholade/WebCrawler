@@ -38,4 +38,3 @@ class SubDomainFilter(Filter):
                           True if url.netloc in self._allowed_domains else False,
                           urls))
         return urls
-

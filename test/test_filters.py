@@ -38,7 +38,3 @@ class TestFilters(unittest.TestCase):
         # Test filtering using filter method
         filtered = self.subdomain_filter.filter(all_urls)
         self.assertEqual(allowed_urls, filtered)
-
-
-
-

@@ -14,5 +14,3 @@ class HTMLParser:
         links = html_soup.find_all('a')  # Returns empty list if None found.
         links = set(URL(link.get('href')) for link in links)
         return links
-
-
